@@ -1,4 +1,5 @@
 const token = "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"
+// const token = "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";
 const inputTxt = document.getElementById("input")
 const image = document.getElementById("image")
 const button = document.getElementById("btn")
@@ -6,6 +7,7 @@ async function query() {
 	image.src = "/Loading1.gif"
 	const response = await fetch(
 		"https://api-inference.huggingface.co/models/ZB-Tech/Text-to-Image",
+
 		{
 			headers: { Authorization: `Bearer ${token}`},
 			method: "POST",
@@ -15,6 +17,7 @@ async function query() {
 	const result = await response.blob();
 	return result;
 }
+
 
 button.addEventListener('click', async function () {
 	query().then((response) => {
