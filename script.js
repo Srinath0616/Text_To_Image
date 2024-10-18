@@ -5,7 +5,7 @@ const button = document.getElementById("btn")
 async function query() {
 	image.src = "/Loading1.gif"
 	const response = await fetch(
-		"https://api-inference.huggingface.co/models/runwayml/stable-diffusion-v1-5",
+		"https://api-inference.huggingface.co/models/ZB-Tech/Text-to-Image",
 		{
 			headers: { Authorization: `Bearer ${token}`},
 			method: "POST",
